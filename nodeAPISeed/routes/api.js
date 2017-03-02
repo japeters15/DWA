@@ -1,17 +1,33 @@
+// calling express function
 module.exports = function (express) {
-var router = express.Router();
+  // router setup
+  var router = express.Router();
+  var path = require("path");
 
-   router.get('/', function(req, res){
-      res.json({ hello: "world"});
-   });
+  // url header
+  router.post('/urls', function (req, res) {
+    var origURL = req.body.originalUrl;
 
-   router.get('/v1', function(req, res){
-      res.json({ healthy: "true"});
-   });
+// source string to general form
+    var sourceString = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz23456789';
+    var totalChars = 8;
 
-   router.get('/urls', function(req, res){
-      res.json({ urls: {url: fakeUrl}});
-   });
+// blank string to build upon
+    var builtURL = '';
+
+    for (var i = 0; i < totalChars; i++) {
+// add randomly picked characters to the builtURL
+      builtURL += sourceString.charAt(Math.random() * sourceString.length);
+    }
+
+// return to the response the builtURL
+    var urlPkg = {
+      origURL: origURL,
+      shortURL: builtURL,
+    };
+
+    res.json(urlPkg);
+  });
 
 return router;
 }
