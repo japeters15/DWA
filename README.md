@@ -14,4 +14,4 @@
 
 # My Endpoints
 POST /api/v1/urls
-    Create a shortened URL
+    A shortened URL should appear in Postman, I haven't quite figured out how to get it to show up on my html page.
