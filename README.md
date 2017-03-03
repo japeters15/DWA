@@ -11,6 +11,7 @@
  First: Install npm by typing "npm install"
  Second: Install nodemon by typing "npm install nodemon"
  Third: Start the server by typing "node src/server.js"
+ Your server should be running on port 3000!
 
 # My Endpoints
 POST /api/v1/urls
