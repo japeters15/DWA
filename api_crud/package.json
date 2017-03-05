@@ -1,5 +1,5 @@
 {
-  "name": "node_api_seed",
+  "name": "api_crud",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
@@ -10,10 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "dotenv": "^4.0.0",
     "expect": "^1.20.2",
     "mocha": "^3.2.0",
     "supertest": "^2.0.1"
