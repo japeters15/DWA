@@ -1,10 +1,9 @@
-var url = require('../../models.url.js')
+var url = require('../../models/url.js')
 
 module.exports = (express) => {
   var router = express.Router();
 
-  router.post('/urls', (req, res) => {
-    console.log("route hit", req.body);
+  router.get('/urls', (req, res) => {
     res.json({
       healthy: true,
     })
