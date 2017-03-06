@@ -15,4 +15,12 @@
 
 # My Endpoints
 POST /api/v1/urls
-    A shortened URL should appear in Postman, I haven't quite figured out how to get it to show up on my html page.
+  Create a shortened URL
+GET /api/v1/urls
+  Display all URLS
+GET /api/v1/urls/:id
+  Display URL based upon id
+POST /api/v1/urls/:id
+  Update URL based upon id
+DELETE  /api/v1/urls/:id
+  Delete url based upon id
