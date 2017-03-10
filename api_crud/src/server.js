@@ -1,6 +1,7 @@
 //dependences
 var express = require('express');
 var bodyParser = require ('body-parser');
+var util = require('../lib/util');
 
 //declare express
 var app = express();
@@ -17,5 +18,7 @@ app.use('/api/v1', require('./routes/api.js')(express));
 var port = process.env.PORT || 3000;
 
 exports.server = app.listen(port, () => {
+
   util.debug('Server Active on', port);
+
 });

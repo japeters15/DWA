@@ -1,21 +1,18 @@
 var url = require('../../models/url.js')
+var util = require('../../../lib/util.js')
 
 module.exports = (express) => {
   var router = express.Router();
 
-  router.get('/urls', (req, res) => {
-    res.json({
-      healthy: true,
-    })
-  });
-
 //create
-router.post('/urls', (req, res) => {
-  url.create(req.body, (err) => {
+router.get('/urls', (req, res) => {
+  url.findAll( ((err) => {
+      util.debug("Error: Someone tried accessing all urls", err, 'error');
     res.status(500).json(err);
   }), (data) => {
+    util.debug("Someone accessed all urls", data, 'success');
     res.status(200).json(data);
-  }
+  })
 });
 
 // Read One
@@ -24,6 +21,7 @@ router.post('/urls', (req, res) => {
     user.find(req.body, (err) => {
       res.status(500).json(err);
     }, (data) => {
+      util.debug("Someone accessed one url", data);
       res.status(200).json(data);
     })
   });
