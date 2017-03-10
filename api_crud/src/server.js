@@ -16,8 +16,6 @@ app.use('/api/v1', require('./routes/api.js')(express));
 //config
 var port = process.env.PORT || 3000;
 
-var server = app.listen(port, function(){
-  console.log('Server Active on', port);
+exports.server = app.listen(port, () => {
+  util.debug('Server Active on', port);
 });
-
-module.exports = server;
