@@ -1,26 +1,8 @@
-# url_shortener
- created by Janay Peters in the Web Design and Development program at Full Sail University.
+# Utility Tool
+A tool used for Debugging!
 
-# Purpose
- The purpose of this url shortener is to allow the user to enter a regular url and it return a unique shortend url.
+# Installation
+npm install debug_tool
 
-# Installation Process
- Click the green button that says, "clone or Download" above on the right.
- After you have cloned or downloaded the application you will then need to open up your terminal and download a few things!<br/>
-
- First: Install npm by typing "npm install"
- Second: Install nodemon by typing "npm install nodemon"
- Third: Start the server by typing "node src/server.js"
- Your server should be running on port 3000!
-
-# My Endpoints
-POST /api/v1/urls
-  Create a shortened URL
-GET /api/v1/urls
-  Display all URLS
-GET /api/v1/urls/:id
-  Display URL based upon id
-POST /api/v1/urls/:id
-  Update URL based upon id
-DELETE  /api/v1/urls/:id
-  Delete url based upon id
+# Usage
+In order to start the debug tool you must add "DEBUG=true" in the front of "nodemon src/server.js"
