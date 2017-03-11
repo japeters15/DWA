@@ -1,12 +1,12 @@
-var Sequelize = require('sequelize');
+const Sequelize = require('sequelize');
 if (!process.env.NODE_ENV) require('dotenv').config();
 
-var sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
   host: process.env.DB_HOST,
   dialect: process.env.DB_SCHEMA,
   port: process.env.DB_PORT,
 
-  //connections happening to the system
+  // connections happening to the system
   pool: {
     max: 5,
     min: 0,
@@ -16,7 +16,7 @@ var sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.
 });
 
 // Sequelize will create the table
-var url = sequelize.define('url', {
+const url = sequelize.define('url', {
   name: {
     type: Sequelize.STRING,
   },
