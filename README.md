@@ -8,6 +8,13 @@ npm install debug_tool
 # Usage
 In order to start the debug tool you must add "DEBUG=true" in the front of "nodemon src/server.js"
 
+# Unit Tests
+For this step you will need to npm install (chai, mocha, and supertest.)
+
+In your terminal type: DEBUG=true mocha in order to run the tests with the debug utility.
+
+Now just run mocha in order to run tests without the debug utility.
+
 # Installation Process
  Click the green button that says, "clone or Download" above on the right.
  After you have cloned or downloaded the application you will then need to open up your terminal and download a few things!<br/>
