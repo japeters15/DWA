@@ -1,7 +1,7 @@
 // dependences
 const express = require('express');
 const bodyParser = require('body-parser');
-const util = require('../lib/util');
+const utilityDebugTool = require('utility_debug_tool');
 
 // declare express
 const app = express();
@@ -17,6 +17,8 @@ app.use('/api/v1', require('./routes/api.js')(express));
 // config
 const port = process.env.PORT || 3000;
 
-exports.server = app.listen(port, () => {
-  util.debug('Server Active on', port);
+const server = app.listen(port, function(){
+  console.log('Server Active on', port);
 });
+
+module.exports = server;

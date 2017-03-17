@@ -1,11 +1,12 @@
-var chalk = require('chalk');
+const chalk = require('chalk');
+const utilityDebugTool = require('utility_debug_tool');
 
-function _bump(currentSemVersion, typeofIncrement){
+function _bump(currentSemVersion, typesofIncrement){
 
   // Major [0]
   // Minor [1]
   // Patch [2]
-  var aryVersions = currentSemVersion.split('.');
+  const aryVersions = currentSemVersion.split('.');
 
   for (let versionIndex in aryVersions) {
     aryVersions[versionIndex] = parseInt(aryVersions[versionIndex]);
@@ -24,17 +25,3 @@ function _bump(currentSemVersion, typeofIncrement){
 
   return aryVersions.join('.');
 }
-
-exports.debug = (title, obj, status) => {
-  var seperator = '\n==================================\n';
-  const output = seperator + title + seperator;
-
-  var error = chalk.bold.red;
-  console.log(error('Error!'));
-  if (!status) {
-    status = '';
-  }
-  if (process.env.DEBUG) {
-    console.log(error(output), obj, status);
-  }
-};
