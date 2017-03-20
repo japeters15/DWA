@@ -25,7 +25,7 @@ Here is a link to the npm website that also has a great walk thorugh of how to i
 <br/>
 
 # Workflow
-First create a new feature branch, merge the feature branch into the master branch, create a new tag, and merge the master branch into the release branch.
+In order to add a new feature you would start by creating a new branch "git checkout name_of_new_branch" then "git push origin release". Now that your new branch is created you need to merge it into the master branch by going back into your master branch "git checkout master" and "git merge name_of_new_branch".
 
 # My Endpoints
 POST /api/v1/urls
@@ -41,5 +41,4 @@ DELETE  /api/v1/urls/:id
 >>>>>>> style_guide
 
 # Deployment
-In order to deploy the server, you will need to be in terminal and type in "ssh root@45.55.76.33" this will open up the server and then type node src/server.js and the server should then be running.
-Now go into your browser and type "http://45.55.76.33/" This should be where the server is running. I am not sure where else to go from here. 
+I am not really sure how to explain the deployment of this assignment. I will try: Open up the browser and pull up Heroku. You will need to create an account and create a new app. You will link the account with your github repo and then choose which branch you will use. If you have a database, you will need to install ClearDB app so go to the resources tab and search for it. Once you have connected it go into settings and click Config Vars and enter all of your database information. Now you need to create a pipeline to connect a deploy branch and a release one. So create a new app and add it into the pipeline as the production app and your first one will become the staging app which all information will deploy to.
