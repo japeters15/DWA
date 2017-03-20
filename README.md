@@ -42,4 +42,4 @@ DELETE  /api/v1/urls/:id
 
 # Deployment
 In order to deploy the server, you will need to be in terminal and type in "ssh root@45.55.76.33" this will open up the server and then type node src/server.js and the server should then be running.
-Now go into your browser and type "http://45.55.76.33/" This should be where the server is running. I am not sure where else to go from here.
+Now go into your browser and type "http://45.55.76.33/" This should be where the server is running. I am not sure where else to go from here. 
