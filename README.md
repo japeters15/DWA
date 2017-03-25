@@ -24,6 +24,25 @@ You also want to go to the settings section in Atom and install the linter-eslin
 Here is a link to the npm website that also has a great walk thorugh of how to install and use it as well.
 <br/>
 
+# Debug Tool Usage
+In order to start the debug tool you must add "DEBUG=true" in the front of "nodemon lib/test.js"
+
+## Example Usage
+const util = require('utility_debug_tool');
+
+//bump versions (patch, minor, major)
+const patch = util.bump('3.3.3', 'patch');
+const minor = util.bump('3.3.3', 'minor');
+const major = util.bump('3.3.3', 'major');
+
+// Success messages
+util.debug('patch', patch, true);
+util.debug('minor', minor, true);
+
+// Error Messages
+util.debug('major', major, false);
+
+
 # Workflow
 In order to add a new feature you would start by creating a new branch "git checkout name_of_new_branch" then "git push origin release". Now that your new branch is created you need to merge it into the master branch by going back into your master branch "git checkout master" and "git merge name_of_new_branch".
 
